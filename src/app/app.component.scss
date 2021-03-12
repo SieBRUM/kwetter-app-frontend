@@ -1,0 +1,21 @@
+.main-container {
+    // Calc based on height of top menu bar
+    height: calc(100% - 50px);
+
+    .main-content {
+        display: flex;
+        height: 100%;
+
+        .side-bar-open-button {
+            width: 50px;
+            background-color: rgb(237, 237, 238);
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .main-content-page {
+            flex-grow: 1;
+        }
+    }
+}

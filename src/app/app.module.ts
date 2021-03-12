@@ -10,6 +10,10 @@ import { MaterialModule } from './material.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AppSideMenuBarComponent } from './app-side-menu-bar/app-side-menu-bar.component';
+import { StyleManagerService } from './style-manager.service';
+import { ThemeService } from './theme.service';
+import { AppThemeChangeMenuComponent } from './app-theme-change-menu/app-theme-change-menu.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -17,7 +21,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppSideMenuBarComponent,
+    AppThemeChangeMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [StyleManagerService, ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

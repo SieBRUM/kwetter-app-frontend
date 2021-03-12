@@ -1,0 +1,18 @@
+{
+    "SIDE_BAR": {
+        "LANGUAGE": "Taal",
+        "LANGUAGES": {
+            "NL": "Nederlands",
+            "EN": "English"
+        },
+        "HOME": "Home",
+        "SHOP": "Winkel",
+        "DASHBOARD": "Mijn dashboard",
+        "LOGIN": "Inloggen",
+        "REGISTER": "Registeren",
+        "LOGOUT": "Uitloggen",
+        "UNPIN_MENU": "Menu losmaken",
+        "PIN_MENU": "Menu vastmaken",
+        "SEND_MAILS": "Stuur phishing mails"
+    }
+}

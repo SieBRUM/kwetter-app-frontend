@@ -1,0 +1,18 @@
+{
+    "SIDE_BAR": {
+        "LANGUAGE": "Language",
+        "LANGUAGES": {
+            "NL": "Nederlands",
+            "EN": "English"
+        },
+        "HOME": "Home",
+        "SHOP": "Shop",
+        "DASHBOARD": "My dashboard",
+        "LOGIN": "Login",
+        "REGISTER": "Register",
+        "LOGOUT": "Logout",
+        "UNPIN_MENU": "Unpin menu",
+        "PIN_MENU": "Pin menu",
+        "SEND_MAILS": "Send phishing mails"
+    }
+}

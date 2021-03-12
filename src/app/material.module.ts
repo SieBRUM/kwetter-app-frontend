@@ -22,6 +22,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
     declarations: [],
@@ -45,7 +46,8 @@ import { MatTableModule } from '@angular/material/table';
         MatStepperModule,
         MatExpansionModule,
         MatListModule,
-        MatTableModule
+        MatTableModule,
+        MatMenuModule,
     ],
     exports: [
         MatDividerModule,
@@ -69,7 +71,8 @@ import { MatTableModule } from '@angular/material/table';
         MatStepperModule,
         MatExpansionModule,
         MatListModule,
-        MatTableModule
+        MatTableModule,
+        MatMenuModule
     ]
 })
 export class MaterialModule { }
