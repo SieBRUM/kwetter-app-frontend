@@ -1,0 +1,50 @@
+<div class="time-line-page-container">
+    <mat-card class="main-card-content">
+        <mat-card-header>
+            <mat-card-title name="home-title">
+                {{ 'HOME.TITLE' | translate }}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="padding-top:15px;">
+            <div style="padding: 30px;">
+                Place kweet here!
+            </div>
+            <mat-divider></mat-divider>
+            <div class="kweet" *ngFor="let kweet of kweets">
+                <div class="kweet-content">
+                    <div class="kweet-profile-image-container">
+                        <img src="assets/images/placeholder_image.jpg" alt="kweet-image" class="image mat-accent">
+                    </div>
+                    <div class="kweet-main-content">
+                        {{ kweet.userName }} &nbsp;
+                        <span class="grey-muted">
+                            {{ kweet.userHandle }} · {{ kweet.date | date }}
+                        </span>
+                        <p style="padding-top:10px;">
+                            {{ kweet.content }}
+                        </p>
+                    </div>
+                </div>
+                <div class="kweet-actions">
+                    <div class="kweet-action">
+                        <button mat-icon-button>
+                            <mat-icon style="float:left;">chat</mat-icon>
+                            <span *ngIf="kweet.amountReplies > 0">&nbsp; {{ kweet.amountReplies }}</span>
+                        </button>
+                    </div>
+                    <div class="kweet-action">
+                        <button mat-icon-button [color]="kweet.hasLiked ? 'primary' : ''">
+                            <mat-icon style="float:left;">
+                                favorite
+                            </mat-icon>
+                            <span *ngIf="kweet.amountHeart > 0" style="top:-10px;">&nbsp; {{ kweet.amountHeart
+                                }}</span>
+                        </button>
+                    </div>
+                </div>
+
+                <mat-divider></mat-divider>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

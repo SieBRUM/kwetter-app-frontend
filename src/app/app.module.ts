@@ -14,6 +14,10 @@ import { AppSideMenuBarComponent } from './app-side-menu-bar/app-side-menu-bar.c
 import { StyleManagerService } from './style-manager.service';
 import { ThemeService } from './theme.service';
 import { AppThemeChangeMenuComponent } from './app-theme-change-menu/app-theme-change-menu.component';
+import { AppLoginPageComponent } from './app-login-page/app-login-page.component';
+import { AppRegisterPageComponent } from './app-register-page/app-register-page.component';
+import { AppHomePageComponent } from './app-home-page/app-home-page.component';
+import { AppTimeLinePageComponent } from './app-time-line-page/app-time-line-page.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -23,7 +27,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,
     AppSideMenuBarComponent,
-    AppThemeChangeMenuComponent
+    AppThemeChangeMenuComponent,
+    AppLoginPageComponent,
+    AppRegisterPageComponent,
+    AppHomePageComponent,
+    AppTimeLinePageComponent
   ],
   imports: [
     BrowserModule,

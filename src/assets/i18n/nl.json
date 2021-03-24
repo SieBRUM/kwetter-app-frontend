@@ -14,5 +14,20 @@
         "UNPIN_MENU": "Menu losmaken",
         "PIN_MENU": "Menu vastmaken",
         "SEND_MAILS": "Stuur phishing mails"
+    },
+    "LOGIN": {
+        "TITLE": "Welkom terug!",
+        "USERNAME": "Gebruikersnaam",
+        "PASSWORD": "Wachtwoord",
+        "LOGIN": "Inloggen",
+        "REGISTER": "Registreren"
+    },
+    "REGISTER": {
+        "TITLE": "Welkom!",
+        "USERNAME": "Gebruikersnaam",
+        "PASSWORD": "Wachtwoord",
+        "REPEAT_PASSWORD": "Wachtwoord herhalen",
+        "EMAIL": "E-mail",
+        "REGISTER": "Registeren"
     }
 }

@@ -1,0 +1,19 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+
+    .main-content {
+        min-width: 400px;
+        max-width: 1000px;
+    }
+
+    .input-field-full-width {
+        width: 100%;
+    }
+
+    .filler {
+        flex: 1;
+    }
+}

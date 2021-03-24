@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { SessionService } from '../session.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class AppSideMenuBarComponent {
 
   constructor(
     public translate: TranslateService,
-    private dialog: MatDialog,
+    private sessionService: SessionService,
     private router: Router
   ) { }
 
@@ -41,8 +42,7 @@ export class AppSideMenuBarComponent {
   }
 
   isLoggedIn(): boolean {
-    return true;
-    // return this.sessionService.isLoggedIn();
+    return this.sessionService.isLoggedIn();
   }
 
   onClickNavigate(route: string): void {
@@ -51,19 +51,10 @@ export class AppSideMenuBarComponent {
         this.router.navigate(['home']);
         break;
       case 'login':
-        // this.dialog.open(AppLoginPageComponent, { panelClass: 'login-dialog' });
+        this.router.navigate(['login']);
         break;
       case 'register':
         this.router.navigate(['register']);
-        break;
-      case 'shop':
-        this.router.navigate(['shop']);
-        break;
-      case 'dashboard':
-        this.router.navigateByUrl('/dashboard');
-        break;
-      case 'editor':
-        this.router.navigate(['editor']);
         break;
       default:
         break;
@@ -71,7 +62,7 @@ export class AppSideMenuBarComponent {
   }
 
   onClickLogout(): void {
-    // this.sessionService.logout();
+    this.sessionService.logout();
     return;
   }
 

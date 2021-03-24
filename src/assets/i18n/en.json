@@ -14,5 +14,20 @@
         "UNPIN_MENU": "Unpin menu",
         "PIN_MENU": "Pin menu",
         "SEND_MAILS": "Send phishing mails"
+    },
+    "LOGIN": {
+        "TITLE": "Welcome back!",
+        "USERNAME": "Username",
+        "PASSWORD": "Password",
+        "LOGIN": "Login",
+        "REGISTER": ":Register"
+    },
+    "REGISTER": {
+        "TITLE": "Welcome!",
+        "USERNAME": "Username",
+        "PASSWORD": "Password",
+        "REPEAT_PASSWORD": "Repeat password",
+        "EMAIL": "Email",
+        "REGISTER": "Register"
     }
 }

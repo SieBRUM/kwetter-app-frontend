@@ -1,0 +1,48 @@
+<div class="login-container">
+    <mat-card class="main-content">
+        <mat-card-header>
+            <mat-card-title name="login-title">
+                {{ 'REGISTER.TITLE' | translate }}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding-top:15px; display:flex; justify-content: center;align-items: center;">
+            <div class="filler"></div>
+            <div style="flex:2;">
+                <mat-form-field appearance="fill" class="input-field-full-width">
+                    <mat-label name="username-input-label">{{ 'REGISTER.USERNAME' | translate }}</mat-label>
+                    <input matInput [(ngModel)]="registerObject.username" [disabled]="isLoading" name="username-input">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill" class="input-field-full-width">
+                    <mat-label name="password-input-label">{{ 'REGISTER.PASSWORD' | translate }}</mat-label>
+                    <input matInput [(ngModel)]="registerObject.password" [disabled]="isLoading" name="password-input"
+                        type="password">
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="input-field-full-width">
+                    <mat-label name="password-input-label">{{ 'REGISTER.REPEAT_PASSWORD' | translate }}</mat-label>
+                    <input matInput [(ngModel)]="secondPassword" [disabled]="isLoading" name="second-password-input"
+                        type="password">
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="input-field-full-width">
+                    <mat-label name="password-input-label">{{ 'REGISTER.EMAIL' | translate }}</mat-label>
+                    <input matInput [(ngModel)]="registerObject.email" [disabled]="isLoading" name="email-input"
+                        type="email">
+                </mat-form-field>
+            </div>
+            <div class="filler"></div>
+        </mat-card-content>
+        <mat-card-actions style="display:flex; justify-content: center;align-items: center;">
+            <div class="filler"></div>
+            <div style="flex:2">
+                <button mat-raised-button color="primary" (click)="onClickRegister()" *ngIf="!isLoading"
+                    name="register-button" style="width:100%;">
+                    {{ 'REGISTER.REGISTER' | translate }}
+                </button>
+                <mat-spinner *ngIf="isLoading" diameter="35" style="margin:auto; padding-bottom: 10px;"
+                    name="register-loading-spinner"></mat-spinner>
+            </div>
+            <div class="filler"></div>
+        </mat-card-actions>
+    </mat-card>
+</div>
