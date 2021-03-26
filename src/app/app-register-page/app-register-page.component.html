@@ -10,8 +10,17 @@
             <div class="filler"></div>
             <div style="flex:2;">
                 <mat-form-field appearance="fill" class="input-field-full-width">
+                    <mat-icon matPrefix *ngIf="shouldShowPrefix('icon')">
+                        alternate_email &nbsp;</mat-icon>
+                    <span matPrefix *ngIf="shouldShowPrefix('span')">@ &nbsp;
+                    </span>
                     <mat-label name="username-input-label">{{ 'REGISTER.USERNAME' | translate }}</mat-label>
-                    <input matInput [(ngModel)]="registerObject.username" [disabled]="isLoading" name="username-input">
+                    <input matInput [(ngModel)]="registerObject.username" [disabled]="isLoading" name="username-input"
+                        id="username-input">
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="input-field-full-width">
+                    <mat-label name="name-input-label">{{ 'REGISTER.NAME' | translate }}</mat-label>
+                    <input matInput [(ngModel)]="registerObject.name" [disabled]="isLoading" name="name-input">
                 </mat-form-field>
                 <br>
                 <mat-form-field appearance="fill" class="input-field-full-width">
@@ -21,13 +30,13 @@
                 </mat-form-field>
                 <mat-form-field appearance="fill" class="input-field-full-width">
                     <mat-label name="password-input-label">{{ 'REGISTER.REPEAT_PASSWORD' | translate }}</mat-label>
-                    <input matInput [(ngModel)]="secondPassword" [disabled]="isLoading" name="second-password-input"
-                        type="password">
+                    <input matInput [(ngModel)]="registerObject.confirmPassword" [disabled]="isLoading"
+                        name="second-password-input" type="password">
                 </mat-form-field>
                 <mat-form-field appearance="fill" class="input-field-full-width">
                     <mat-label name="password-input-label">{{ 'REGISTER.EMAIL' | translate }}</mat-label>
                     <input matInput [(ngModel)]="registerObject.email" [disabled]="isLoading" name="email-input"
-                        type="email">
+                        type="email" (keyup.enter)="onClickRegister()">
                 </mat-form-field>
             </div>
             <div class="filler"></div>

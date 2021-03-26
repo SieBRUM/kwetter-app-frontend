@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { TranslateModule } from '@ngx-translate/core';
@@ -18,6 +18,7 @@ import { AppLoginPageComponent } from './app-login-page/app-login-page.component
 import { AppRegisterPageComponent } from './app-register-page/app-register-page.component';
 import { AppHomePageComponent } from './app-home-page/app-home-page.component';
 import { AppTimeLinePageComponent } from './app-time-line-page/app-time-line-page.component';
+import { AppInterceptor } from './app.interceptor';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -49,7 +50,13 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [StyleManagerService, ThemeService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AppInterceptor,
+      multi: true
+    },
+    StyleManagerService, ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

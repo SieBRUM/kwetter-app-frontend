@@ -25,6 +25,7 @@
     "REGISTER": {
         "TITLE": "Welkom!",
         "USERNAME": "Gebruikersnaam",
+        "NAME": "Naam",
         "PASSWORD": "Wachtwoord",
         "REPEAT_PASSWORD": "Wachtwoord herhalen",
         "EMAIL": "E-mail",

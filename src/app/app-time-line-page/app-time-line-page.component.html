@@ -27,18 +27,19 @@
                 </div>
                 <div class="kweet-actions">
                     <div class="kweet-action">
-                        <button mat-icon-button>
+                        <button mat-icon-button disableRipple="true">
                             <mat-icon style="float:left;">chat</mat-icon>
                             <span *ngIf="kweet.amountReplies > 0">&nbsp; {{ kweet.amountReplies }}</span>
                         </button>
                     </div>
                     <div class="kweet-action">
-                        <button mat-icon-button [color]="kweet.hasLiked ? 'primary' : ''">
+                        <button mat-icon-button [color]="kweet.hasLiked ? 'primary' : ''" disableRipple="true">
                             <mat-icon style="float:left;">
                                 favorite
                             </mat-icon>
-                            <span *ngIf="kweet.amountHeart > 0" style="top:-10px;">&nbsp; {{ kweet.amountHeart
-                                }}</span>
+                            <span *ngIf="kweet.amountHeart > 0" style="top:-10px;">
+                                &nbsp; {{ kweet.amountHeart }}
+                            </span>
                         </button>
                     </div>
                 </div>

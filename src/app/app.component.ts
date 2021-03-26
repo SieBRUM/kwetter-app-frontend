@@ -86,7 +86,6 @@ export class AppComponent {
   initTheme(): void {
     const localStorageTheme = localStorage.getItem('theme');
     if (localStorageTheme !== '' && localStorageTheme !== null) {
-      console.log(localStorageTheme);
       this.themeService.setTheme(localStorageTheme);
       return;
     }

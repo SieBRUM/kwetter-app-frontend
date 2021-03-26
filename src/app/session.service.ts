@@ -59,12 +59,11 @@ export class SessionService {
     const currentRouteConfig = this.router.config.find(f => f.path === this.router.url.substr(1));
     if (currentRouteConfig != null && currentRouteConfig.canActivate != null) {
       this.redirectUrl = this.router.url;
-      this.router.navigate(['/home']);
+      this.router.navigate(['login']);
     }
   }
 
   isLoggedIn(): boolean {
-    return true;
-    // return this.userCookie ? true : false;
+    return this.userCookie ? true : false;
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 import { IKweet } from '../models/kweet.model';
 
 @Component({
@@ -55,5 +56,9 @@ export class AppTimeLinePageComponent {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private apiService: ApiService
+  ) {
+    this.apiService.getTimeline().subscribe();
+  }
 }

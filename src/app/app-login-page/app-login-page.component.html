@@ -10,14 +10,19 @@
             <div class="filler"></div>
             <div style="flex:2;">
                 <mat-form-field appearance="fill" class="input-field-full-width">
+                    <mat-icon matPrefix *ngIf="shouldShowPrefix('icon')">
+                        alternate_email &nbsp;</mat-icon>
+                    <span matPrefix *ngIf="shouldShowPrefix('span')">@ &nbsp;
+                    </span>
                     <mat-label name="username-input-label">{{ 'LOGIN.USERNAME' | translate }}</mat-label>
-                    <input matInput [(ngModel)]="loginObject.username" [disabled]="isLoading" name="username-input">
+                    <input matInput [(ngModel)]="loginObject.username" [disabled]="isLoading" name="username-input"
+                        id="username-input">
                 </mat-form-field>
                 <br>
                 <mat-form-field appearance="fill" class="input-field-full-width">
                     <mat-label name="password-input-label">{{ 'LOGIN.PASSWORD' | translate }}</mat-label>
                     <input matInput [(ngModel)]="loginObject.password" [disabled]="isLoading" name="password-input"
-                        type="password">
+                        type="password" (keyup.enter)="onClickLogin()">
                 </mat-form-field>
             </div>
             <div class="filler"></div>

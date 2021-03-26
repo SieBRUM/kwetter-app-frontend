@@ -25,6 +25,7 @@
     "REGISTER": {
         "TITLE": "Welcome!",
         "USERNAME": "Username",
+        "NAME": "Name",
         "PASSWORD": "Password",
         "REPEAT_PASSWORD": "Repeat password",
         "EMAIL": "Email",
