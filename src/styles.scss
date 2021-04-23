@@ -9,3 +9,18 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.success,
+.green {
+    color: #4caf50
+}
+
+.error-snack {
+    background-color: #dc3545;
+    color: white;
+}
+
+.success-snack {
+    background-color: #4caf50;
+    color: white;
+}

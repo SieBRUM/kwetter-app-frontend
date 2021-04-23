@@ -14,12 +14,12 @@ export class AppTimeLinePageComponent {
       id: 1,
       date: new Date(),
       userImageBase64: '',
-      userName: 'Siebren Kraak',
+      userName: '<IMG SRC=j&#X41vascript:alert("test2")>',
       userHandle: '@siebren',
       hasLiked: true,
       amountReplies: 10,
       amountHeart: 100,
-      content: 'Hello world!'
+      content: '<script>alert(1)</script>!'
     },
     {
       id: 2,

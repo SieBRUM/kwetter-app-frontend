@@ -68,7 +68,7 @@ export class AppLoginPageComponent {
   }
 
   shouldShowPrefix(type: string): boolean {
-    const result = (document.activeElement === document.getElementById('username-input'));
+    const result = (document.activeElement === document.getElementById('username-input') && document.activeElement !== null);
 
     if (type === 'icon') {
       return (!result && this.loginObject.username.trim() === '');
