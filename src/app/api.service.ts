@@ -9,7 +9,7 @@ import { IRegister } from './models/register.model';
 })
 export class ApiService {
 
-  API_GATEWAY = 'https://localhost:44337/api/';
+  API_GATEWAY = 'https://localhost:84/api/';
 
   constructor(private http: HttpClient) { }
 
