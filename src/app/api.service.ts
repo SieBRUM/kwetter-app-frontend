@@ -19,9 +19,6 @@ export class ApiService {
     return this.http.get<any>(`${this.API_GATEWAY}kweet/timeline`, { observe: 'response' });
   }
 
-  getTimeline(): Observable<HttpResponse<any>> {
-    return this.http.get<any>(`${this.API_GATEWAY}kweet/timeline`, { observe: 'response' });
-  }
   /* POST calls */
   registerUser(user: IRegister): Observable<HttpResponse<any>> {
     return this.http.post<any>(`${this.API_GATEWAY}user`, user, { observe: 'response' });
